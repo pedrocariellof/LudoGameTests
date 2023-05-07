@@ -20,7 +20,7 @@ class testPawn {
 	}
 	
 	@Test 
-	public void pawnMove() {
+	void pawnMove() {
 		assertEquals("Error on the pawn start location", 0, pawnYellow.getTotalMoves());
 		pawnYellow.addMove(1);
 		assertEquals("Error in pawn.addMove()", 1, pawnYellow.getTotalMoves());
@@ -41,7 +41,7 @@ class testPawn {
 	}
 	
 	@Test
-	public void pawnCompare() {
+	void pawnCompare() {
 		assertNotSame("Different pawns(yellow and blue) returning true in equals",pawnYellow.equals(pawnBlue));
 		assertNotSame("Different pawns(yellow and red) returning true in equals",pawnYellow.equals(pawnRed));
 		assertNotSame("Different pawns(yellow and green) returning true in equals",pawnYellow.equals(pawnGreen));

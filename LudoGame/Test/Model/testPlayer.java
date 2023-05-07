@@ -33,7 +33,7 @@ class testPlayer {
 	
 	
 	@Test
-	public void testsStartHouse() {
+	void testsStartHouse() {
 		assertEquals("The initial house of the yellow player was stored incorrectly.",2, playerYellow.getStartHouse());
 		assertEquals("The initial house of the red player was stored incorrectly.",15, playerRed.getStartHouse());
 		assertEquals("The initial house of the blue player was stored incorrectly.",28, playerBlue.getStartHouse());
@@ -56,7 +56,7 @@ class testPlayer {
     }
 
 	@Test
-	public void testsPawnsnInBase() {
+	void testsPawnsnInBase() {
 		assertEquals("Incorrect initialization of pawnsInBase",4,playerRed.getHowManyPawnsInBase());
 		playerRed.decPawnsInBase();
 		assertEquals("Incorrect count in decPawnsInBase",3,playerRed.getHowManyPawnsInBase());
@@ -72,7 +72,7 @@ class testPlayer {
 	}
 	
 	@Test
-	public void testsPawnsMoveIndentification() { 
+	void testsPawnsMoveIndentification() { 
 		pawnBlue.addMove(1);
 		pawnBlue.addMove(6);
 		pawnBlue.addMove(6);

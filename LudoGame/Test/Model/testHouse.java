@@ -21,47 +21,47 @@ class testHouse {
 	House testBarrier = new House(false,false,false);
 	
 	@Test
-	public void testsYellowPawns() {
+	void testsYellowPawns() {
 		testHouseNotSafe.addPawn(pawnYellow);
 		assertEquals("Wrong yellow pawn added", PlayerColor.AMARELO.getValue(), testHouseNotSafe.getPawnsInHouse().get(0).getColor());
 		testHouseNotSafe.removePawn();
 	}
 	
 	@Test
-	public void testsRedPawns() {
+	void testsRedPawns() {
 		testHouseNotSafe.addPawn(pawnRed);
 		assertEquals("Wrong red pawn added", PlayerColor.VERMELHO.getValue(), testHouseNotSafe.getPawnsInHouse().get(0).getColor());
 		testHouseNotSafe.removePawn();
 	}
 	
 	@Test
-	public void testsBluePawns() {
+	void testsBluePawns() {
 		testHouseNotSafe.addPawn(pawnBlue);
 		assertEquals("Wrong blue pawn added", PlayerColor.AZUL.getValue(), testHouseNotSafe.getPawnsInHouse().get(0).getColor());
 		testHouseNotSafe.removePawn();
 	}
 	
 	@Test
-	public void testsGreeenPawns() { 
+	void testsGreeenPawns() { 
 		testHouseNotSafe.addPawn(pawnGreen);
 		assertEquals("Wrong green pawn added", PlayerColor.VERDE.getValue(), testHouseNotSafe.getPawnsInHouse().get(0).getColor());
 		testHouseNotSafe.removePawn();
 	}
 	
 	@Test
-	public void testSafe() {
+	void testSafe() {
 		assertTrue("Safe house does not return true in isSafe",testHouseSafe.isSafe());
 		assertFalse("Non-safe house does not return false in isSafe",testHouseNotSafe.isSafe());
 	}
 	
 	@Test
-	public void testFinal() {
+	void testFinal() {
 		assertTrue("Final house does not return true in isFinalHouse",testFinalHouse.isFinalHouse());
 		assertFalse("Non-final house does not return false in isFinalHouse",testNotFinalHouse.isFinalHouse());
 	}
 	
 	@Test
-	public void testPawnsInHouse() {
+	void testPawnsInHouse() {
 		assertEquals("House starts with .size() different from 0",0,testAdd.getPawnsInHouse().size());
 		testAdd.addPawn(pawnBlue);
 		assertEquals("getPawnsInHouse().size() returns wrong value",1,testAdd.getPawnsInHouse().size());
@@ -73,14 +73,14 @@ class testHouse {
 	}
 	
 	@Test
-	public void testInitial() {
+	void testInitial() {
 		assertTrue("Initial house does not return true in isInitialHouse",testInitialHouse.isInitialHouse());
 		assertFalse("Non-initial house does not return false in isInitialHouse",testNotInitialHouse.isInitialHouse());
 	}
 	
 	
 	@Test
-	public void testBarrierUp() {
+	void testBarrierUp() {
 		assertFalse("House without barrier doesn't return false in isBarrierUp",testBarrier.isBarrierUp());
 		testBarrier.setBarrierUp();
 		assertTrue("House with barrier doesn't return true in isBarrierUp",testBarrier.isBarrierUp());
